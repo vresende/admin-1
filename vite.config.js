@@ -4,7 +4,10 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/scss/app.scss', 'resources/js/app.js'],
+            input: [
+                'resources/scss/app.scss',
+                'resources/js/app.js'
+            ],
             refresh: true,
         }),
     ],
@@ -18,6 +21,8 @@ export default defineConfig({
             '~aos': '/node_modules/aos/',
             '~zoomist': '/node_modules/zoomist/',
             '~swiper': '/node_modules/swiper/',
+            '~light': '/resources/scss/admin/light',
+            '~dark': '/resources/scss/admin/dark',
         },
     },
 });

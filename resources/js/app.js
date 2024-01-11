@@ -67,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // AOS - Animate elements html
     AOS.init();
 
+
+
     //zoomist
     var elementZooms = document.querySelectorAll('.zoomist-container');
     if (elementZooms.length > 0) {
@@ -160,4 +162,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     observer.observe(document.body, { childList: true, subtree: true, attributes: true, attributeFilter: ['class'] });
+
+
+});
+
+//Alterar Temas
+
+function changeColorMode(themeToggle) {
+    // Obter o tema atual
+    const currentTheme = themeToggle.getAttribute('data-bs-theme');
+    const isLightTheme = currentTheme === 'light';
+
+    // Alternar o tema
+    const newTheme = isLightTheme ? 'dark' : 'light';
+    themeToggle.setAttribute('data-bs-theme', newTheme);
+    localStorage.setItem('theme', newTheme); // Atualizar o tema no localStorage
+
+    // Alternar as classes dos ícones
+    const icon = themeToggle.querySelector('i.theme-color');
+    if (icon) {
+        icon.classList.toggle('bi-sun-fill', !isLightTheme);
+        icon.classList.toggle('bi-moon-fill', isLightTheme);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.querySelector('body');
+    const themeToggleButton = document.querySelector('i.theme-color');
+
+    // Verificar se o tema já está salvo no localStorage
+    let currentTheme = localStorage.getItem('theme');
+
+    // Se não houver um tema salvo, definir o tema padrão para 'light'
+    if (!currentTheme) {
+        currentTheme = 'light';
+    }
+    localStorage.setItem('theme', currentTheme);
+
+    // Aplicar o tema salvo ou o padrão
+    themeToggle.setAttribute('data-bs-theme', currentTheme);
+
+    // Ajustar o ícone de acordo com o tema
+    if (themeToggleButton) {
+        themeToggleButton.classList.toggle('bi-sun-fill', currentTheme === 'light');
+        themeToggleButton.classList.toggle('bi-moon-fill', currentTheme === 'dark');
+    }
+
+    // Definir o evento de clique para alternar o tema
+    themeToggleButton.addEventListener('click', () => {
+        changeColorMode(themeToggle);
+    });
 });

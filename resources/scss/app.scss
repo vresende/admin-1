@@ -1,4 +1,9 @@
-
+// externos
+html,body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap-icons/font/bootstrap-icons.min.css";
 @import "./plugins/choises.scss";
@@ -7,6 +12,51 @@
 @import "~zoomist/zoomist.css";
 @import "~swiper/swiper-bundle.min.css";
 
+@import "./admin/variables-dark";
+@import "./admin/variables-light";
+@import "./admin/header";
+
+/** MAIN **/
+.main-container{
+    background-color: var(--body-secondary-bg);
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.content {
+    flex-grow: 1; /* Faz com que a div ocupe o espaço restante */
+}
+/** SIDEBAR **/
+.sidebar{
+    width: calc(100vw/4);
+    transition: all 0.3s;
+    flex-grow: 1;
+    background-color: transparent;
+
+}
+//body
+.mr-2{
+    margin-right: 0.5rem !important;
+}
+.mr-5{
+    margin-right: 1rem;
+}
+.dropdown-menu-center{
+    position: absolute;
+    inset: unset !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+}
+
+.notification-item{
+    border-bottom: 1px solid rgb(47, 52, 107) !important;
+    margin-top: 0.5rem !important;
+    font-size: 0.7rem !important;
+}
+//fonts
+@import "./admin/fonts";
+
 // IMAGE
 .img-cover{
     width: 100%;
@@ -14,3 +64,33 @@
     object-position: center;
 }
 
+
+//Animations
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slide-up {
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+}

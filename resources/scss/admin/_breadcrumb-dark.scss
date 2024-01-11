@@ -1,0 +1,97 @@
+
+.page-meta {
+    margin-top: 25px;
+
+    .breadcrumb .breadcrumb-item {
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 1px;
+
+        a {
+            vertical-align: inherit;
+        }
+
+        &.active {
+            font-weight: 500;
+        }
+    }
+}
+
+.breadcrumb {
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+.breadcrumb-wrapper-content {
+    background-color: rgb(26 28 45);
+    padding: 13px 23px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+}
+
+.breadcrumb .breadcrumb-item {
+    a {
+        color: #e0e6ed;
+        vertical-align: text-bottom;
+        vertical-align: text-top;
+    }
+
+    &.active a {
+        color: #515365;
+    }
+
+    a {
+        svg {
+            width: 19px;
+            height: 19px;
+            vertical-align: sub;
+            stroke-width: 1.4px;
+        }
+
+        .inner-text {
+            margin-left: 10px;
+        }
+    }
+
+    span {
+        vertical-align: text-bottom;
+    }
+
+    &::before {
+        color: inherit;
+    }
+
+    &.active {
+        color: #d3d3d3;
+        font-weight: 600;
+    }
+}
+
+.breadcrumb-style-two .breadcrumb-item + .breadcrumb-item::before {
+    content: '.';
+    position: relative;
+    top: -9px;
+    font-size: 21px;
+    height: 7px;
+}
+
+.breadcrumb-style-three .breadcrumb-item + .breadcrumb-item::before {
+    content: '-';
+}
+
+.breadcrumb-style-four .breadcrumb-item + .breadcrumb-item::before {
+    content: '|';
+}
+
+.breadcrumb-style-five .breadcrumb-item + .breadcrumb-item::before {
+    content: '';
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right' style='color: %23888ea8;'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #6E6B7B;
+    margin-right: 0.6rem;
+    background-size: 12px;
+    height: 20px;
+}
