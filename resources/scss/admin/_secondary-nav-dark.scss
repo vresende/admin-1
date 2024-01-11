@@ -1,0 +1,116 @@
+.secondary-nav {
+    width: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    -webkit-box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12), 0 3px 5px -1px rgba(0,0,0,.2);
+    box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+    background: rgb(26, 28, 45);
+    min-height: 52px;
+
+    .breadcrumbs-container {
+        display: flex;
+        width: 100%;
+
+        .navbar {
+            border-radius: 0;
+            padding: 9px 0;
+            justify-content: flex-start;
+            width: 100%;
+
+
+            .sidebarCollapse {
+                position: relative;
+                margin-left: 0;
+                padding: 0 25px 0 31px;
+
+                svg {
+                    width: 20px;
+                    height: 20px;
+                    color: #e0e6ed;
+                    vertical-align: text-top;
+                }
+
+            }
+
+            .breadcrumb-action-dropdown {
+
+                .custom-dropdown-icon {
+                    padding-right: 24px;
+
+                    a {
+                        &.dropdown-toggle {
+                            position: relative;
+                            padding: 9px 35px 9px 10px;
+                            border: 1px solid #3b3f5c;
+                            border-radius: 8px;
+                            transform: none;
+                            font-size: 13px;
+                            line-height: 17px;
+                            background-color: rgb(26, 28, 45);
+                            letter-spacing: normal;
+                            min-width: 115px;
+                            text-align: inherit;
+                            color: #e0e6ed;
+                            box-shadow: none;
+                            max-height: 35px;
+
+                            svg {
+                                &.custom-dropdown-arrow {
+                                    position: absolute;
+                                    right: 15px;
+                                    top: 11px;
+                                    color: #888ea8;
+                                    width: 13px;
+                                    height: 13px;
+                                    margin: 0;
+                                    -webkit-transition: -webkit-transform 0.2s ease-in-out;
+                                    transition: -webkit-transform 0.2s ease-in-out;
+                                    transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+                                }
+                            }
+
+                        }
+                    }
+
+                    .dropdown-menu {
+                        top: 3px !important;
+                        padding: 8px 0;
+                        border: none;
+                        min-width: 155px;
+                        background-color: #191e3a;
+                        -webkit-box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+                        box-shadow: 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%), 0 3px 5px -1px rgb(0 0 0 / 20%);
+
+                        a {
+                            padding: 8px 15px;
+                            font-size: 13px;
+                            font-weight: 500;
+                            color: #e0e6ed;
+
+                            svg {
+                                width: 20px;
+                                height: 20px;
+                                margin-right: 5px;
+                                stroke-width: 1.5px;
+                            }
+
+                            &:hover {
+                                background-color: rgba(59, 63, 92, 0.45);
+                                color: #e0e6ed;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+
+        }
+
+    }
+}
