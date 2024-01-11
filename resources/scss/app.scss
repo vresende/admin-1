@@ -1,0 +1,16 @@
+
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.min.css";
+@import "./plugins/choises.scss";
+@import "~flatpickr/dist/flatpickr.min.css";
+@import "~aos/dist/aos.css";
+@import "~zoomist/zoomist.css";
+@import "~swiper/swiper-bundle.min.css";
+
+// IMAGE
+.img-cover{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
