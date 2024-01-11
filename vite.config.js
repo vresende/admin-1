@@ -6,8 +6,6 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/scss/app.scss',
-                'resources/scss/admin/light/light.scss',
-                'resources/scss/admin/dark/dark.scss',
                 'resources/js/app.js'
             ],
             refresh: true,
